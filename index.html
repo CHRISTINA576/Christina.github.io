@@ -1,194 +1,206 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Melanin Doll - Accueil</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap');
-
-  /* Couleurs */
-  :root {
-    --beige: #f5f0e6;
-    --nude: #d8b4a6;
-    --rose-poudre: #f7d1cd;
-    --doré: #bfa06f;
-    --text-color: #4a3c31;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--beige);
-    color: var(--text-color);
-  }
-
-  header {
-    background: linear-gradient(135deg, var(--nude), var(--rose-poudre));
-    padding: 60px 20px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: var(--doré);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-
-  header p {
-    font-size: 1.3rem;
-    font-style: italic;
-    margin-top: 0;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  section.presentation {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  section.presentation h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--doré);
-  }
-
-  section.presentation p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #5a4f43;
-  }
-
-  section.ebooks h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--doré);
-  }
-
-  .ebook-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-
-  .ebook-item {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(191, 160, 111, 0.3);
-    width: 280px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .ebook-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(191, 160, 111, 0.5);
-  }
-
-  .ebook-item h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--nude);
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-  }
-
-  .ebook-item p {
-    font-size: 1rem;
-    color: #6e5a44;
-    min-height: 60px;
-  }
-
-  .ebook-price {
-    margin-top: 15px;
-    font-weight: bold;
-    color: var(--doré);
-    font-size: 1.2rem;
-  }
-
-  footer {
-    margin-top: 60px;
-    background-color: var(--nude);
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-  }
-
-  footer a {
-    color: white;
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .ebook-list {
-      flex-direction: column;
-      align-items: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bienvenue dans l’univers de la Melanin Doll – Beauté, style, glow up et confiance en soi.">
+  <title>Melanin Doll</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --beige: #f5efe6;
+      --nude: #f3dacd;
+      --gold: #c9ab81;
+      --rose: #f6dce3;
+      --text-dark: #3a2c27;
     }
-  }
-</style>
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--beige);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--nude);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: var(--gold);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about img {
+      max-width: 200px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .ebooks {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ebook-card {
+      background: var(--rose);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      flex: 1 1 250px;
+    }
+
+    .ebook-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .ebook-card p {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .testimonials, .newsletter {
+      background-color: var(--nude);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .testimonial {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    footer {
+      background-color: var(--gold);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a {
+      color: var(--text-dark);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .ebooks {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Melanin Doll</h1>
-  <p>Brille en beauté, sois ta propre reine</p>
-</header>
+  <!-- Hero section -->
+  <header>
+    <h1>Bienvenue dans l’univers de la Melanin Doll</h1>
+    <p>Beauté – Style – Glow Up – Confiance en soi</p>
+    <a href="#ebooks" class="btn">Découvrir mes e-books</a>
+  </header>
 
-<main>
-  <section class="presentation">
-    <h2>Bienvenue dans l’univers Melanin Doll</h2>
-    <p>Explore mes e-books exclusifs dédiés à la mode, la beauté, le self-care et la confiance en soi. Embarque pour un voyage inspirant et transforme ta routine au quotidien.</p>
+  <!-- À propos -->
+  <section class="about" id="a-propos">
+    <div style="text-align:center">
+      <img src="https://via.placeholder.com/200" alt="Christina" />
+      <h2>À propos de moi</h2>
+      <p>Je suis Christina, créatrice de l’univers Melanin Doll. Ici, je t’aide à révéler ta beauté intérieure et extérieure à travers des conseils, des looks et du self-care.</p>
+    </div>
   </section>
 
-  <section class="ebooks">
-    <h2>Mes e-books à découvrir</h2>
-    <div class="ebook-list">
-      <div class="ebook-item">
+  <!-- Ebooks -->
+  <section id="ebooks">
+    <h2 style="text-align:center">Mes e-books</h2>
+    <div class="ebooks">
+      <div class="ebook-card">
         <h3>Glow Up Total</h3>
-        <p>Ton guide complet pour révéler ta beauté naturelle et rayonner chaque jour.</p>
-        <div class="ebook-price">15 €</div>
+        <p>12,90€</p>
+        <a href="#" class="btn">Lire plus</a>
       </div>
-
-      <div class="ebook-item">
+      <div class="ebook-card">
         <h3>Journal d’une Queen</h3>
-        <p>Un journal intime pour cultiver ta confiance et ton mindset de reine.</p>
-        <div class="ebook-price">10 €</div>
+        <p>9,90€</p>
+        <a href="#" class="btn">Lire plus</a>
       </div>
-
-      <div class="ebook-item">
+      <div class="ebook-card">
         <h3>Style Melanin Doll</h3>
-        <p>Inspire-toi de looks élégants, féminins et colorés pour affirmer ton style unique.</p>
-        <div class="ebook-price">12 €</div>
+        <p>14,90€</p>
+        <a href="#" class="btn">Lire plus</a>
       </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <p>Retrouve-moi sur :</p>
-  <a href="https://instagram.com/tonprofil" target="_blank">Instagram</a>
-  <a href="https://facebook.com/tonprofil" target="_blank">Facebook</a>
-  <a href="https://twitter.com/tonprofil" target="_blank">Twitter</a>
-</footer>
+  <!-- Instagram -->
+  <section>
+    <h2 style="text-align:center">Ma communauté Instagram</h2>
+    <p style="text-align:center">Rejoins-moi sur Instagram pour encore plus d’inspiration 💖</p>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="https://www.instagram.com/melanindoll" class="btn">Me suivre sur Instagram</a>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="testimonials">
+    <h2>Témoignages</h2>
+    <p class="testimonial">“Ce e-book a changé ma routine beauté, je me sens plus confiante que jamais !” – Soraya</p>
+    <p class="testimonial">“Le Journal d’une Queen m’aide à rester alignée chaque jour.” – Mélissa</p>
+    <p class="testimonial">“Le style Melanin Doll m’a redonné le goût de prendre soin de moi.” – Inès</p>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Inscris-toi à la newsletter</h2>
+    <p>Reçois des astuces exclusives, des freebies et des conseils pour glow up comme une vraie Melanin Doll.</p>
+    <form style="margin-top:20px;">
+      <input type="email" placeholder="Ton email" required style="padding:10px; width:60%; max-width:300px;" />
+      <button class="btn" type="submit">Je m’inscris</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Suis-moi : 
+      <a href="https://www.instagram.com/melanindoll">@melanindoll (Insta)</a> | 
+      <a href="https://www.tiktok.com/@melanindoll">@melanindoll (TikTok)</a>
+    </p>
+    <p>Contact : <a href="mailto:yanachristina@icloud.com">yanachristina@icloud.com</a></p>
+    <p>&copy; 2025 Melanin Doll</p>
+  </footer>
 
 </body>
 </html>
