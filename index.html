@@ -1,24 +1,301 @@
-<section id="presentation" style="background-color: #f8f1ec; padding: 40px 0;">
-  <div style="text-align: center;">
-    <h1 style="font-family: 'Georgia', serif; color: #b8926a;">Bienvenue dans l’univers de la Melanin Doll</h1>
-    <p style="font-style: italic; color: #d4a1a7; margin-bottom: 20px;">
-      Beauté – Style – Glow Up – Confiance en soi
-    </p>
-    <img src="https://christina576.github.io/Christina.github.io/assets/melanin-doll-presentation.png" 
-         alt="Présentation Melanin Doll"
-         style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    <br><br>
-    <a href="#ebooks" style="
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #d4a1a7;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <style>
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel img {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #e5d7cc;
+  }
+</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Melanin Doll</title>
+  <style>
+    :root {
+      --beige: #f5f0e8;
+      --nude: #e5d7cc;
+      --doré: #b8926a;
+      --rose: #d4a1a7;
+      --text-dark: #3e2e2c;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--beige);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .hero {
+      background: var(--nude);
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      color: var(--doré);
+      margin-bottom: 0.5em;
+    }
+    .hero p {
+      font-style: italic;
+      color: var(--rose);
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    .hero button {
+      background: var(--doré);
       color: #fff;
-      text-decoration: none;
+      border: none;
+      padding: 14px 28px;
       border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .about, .ebooks, .instagram, .testimonials, .newsletter {
+      margin-bottom: 60px;
+    }
+
+    .about .photo-placeholder {
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      background: var(--nude);
+      margin-bottom: 20px;
+    }
+    .about p { font-size: 1.1em; }
+
+    .ebooks .grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; }
+    .ebook-card {
+      background: white;
+      padding: 20px;
+      border: 1px solid var(--nude);
+      border-radius: 12px;
+      text-align: center;
+      flex: 1 1 300px;
+    }
+    .ebook-card h3 { margin: 0.5em 0; color: var(--doré); }
+    .ebook-card .price { font-weight: bold; color: var(--rose); margin: 0.5em 0; }
+    .ebook-card .actions button {
+      margin: 5px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      background: var(--rose);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .instagram .carousel-placeholder {
+      height: 200px;
+      background: var(--nude);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--rose);
+      font-style: italic;
+    }
+    .instagram button {
+      padding: 10px 18px;
+      background: var(--doré);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .testimonials .testimonial-box {
+      background: var(--nude);
+      border-left: 4px solid var(--doré);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .testimonial-box p { font-style: italic; }
+
+    .newsletter {
+      background: var(--rose);
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      background: var(--doré);
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--nude);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    footer a.social-icon {
+      margin: 0 8px;
+      color: var(--doré);
       font-weight: bold;
-      margin-top: 20px;
-    ">
-      Découvrir mes e-books
-    </a>
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2em; }
+      .ebooks .grid { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <img src="chemin/vers/glow-up-total-cover.jpg" alt="Glow Up Total – couverture e‑book" style="border-radius:12px; max-width:320px;">
+    <h1>Bienvenue dans l’univers de la Melanin Doll</h1>
+    <p>Beauté – Style – Glow Up – Confiance en soi</p>
+    <button onclick="document.getElementById('ebooks').scrollIntoView({behavior:'smooth'})">
+      Découvrir mes e‑books
+    </button>
+  </section>
+
+  <div class="container">
+
+    <!-- 2. À propos de moi -->
+    <section class="about" id="about">
+      <div class="photo-placeholder"></div>
+      <p>Je suis Christina, créatrice de l’univers Melanin Doll. Ici, je t’aide à révéler ta beauté intérieure et extérieure à travers des conseils, des looks et du self‑care.</p>
+    </section>
+
+    <!-- 3. Mes e‑books -->
+    <section class="ebooks" id="ebooks">
+      <h2 style="text-align:center; color:var(--doré); margin-bottom:20px;">Mes e‑books</h2>
+      <div class="grid">
+        <div class="ebook-card">
+          <div class="share-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://tonsite.com" target="_blank">📘 Facebook</a> |
+  <a href="https://api.whatsapp.com/send?text=Découvre ce super e-book : https://tonsite.com" target="_blank">💬 WhatsApp</a> |
+  <a href="mailto:?subject=Découvre cet e-book&body=Voici un e-book génial : https://tonsite.com">📧 Email</a>
+</div>
+          <img src="chemin/vers/glow-up-total-cover.jpg" alt="Glow Up Total">
+          <h3>Glow Up Total</h3>
+          <p class="price">15 €</p>
+          <div class="actions">
+            <button>Lire plus</button><button>Télécharger</button>
+            <a href="https://gumroad.com/l/ebook-glowuptotal" target="_blank">
+  <button style="background-color: var(--doré);">Acheter maintenant</button>
+</a>
+          </div>
+        </div>
+        
+        <div class="ebook-card">
+          <div class="share-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://tonsite.com" target="_blank">📘 Facebook</a> |
+  <a href="https://api.whatsapp.com/send?text=Découvre ce super e-book : https://tonsite.com" target="_blank">💬 WhatsApp</a> |
+  <a href="mailto:?subject=Découvre cet e-book&body=Voici un e-book génial : https://tonsite.com">📧 Email</a>
+</div>
+          <img src="chemin/vers/journal-queen-cover.jpg" alt="Journal d’une Queen">
+          <h3>Journal d’une Queen</h3>
+          <p class="price">12 €</p>
+          <div class="actions">
+            <button>Lire plus</button><button>Télécharger</button>
+            <a href="https://gumroad.com/l/ebook-glowuptotal" target="_blank">
+  <button style="background-color: var(--doré);">Acheter maintenant</button>
+</a>
+          </div>
+        </div>
+        
+        <div class="ebook-card">
+          <div class="share-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://tonsite.com" target="_blank">📘 Facebook</a> |
+  <a href="https://api.whatsapp.com/send?text=Découvre ce super e-book : https://tonsite.com" target="_blank">💬 WhatsApp</a> |
+  <a href="mailto:?subject=Découvre cet e-book&body=Voici un e-book génial : https://tonsite.com">📧 Email</a>
+</div>
+          <img src="chemin/vers/style-melanin-cover.jpg" alt="Style Melanin Doll">
+          <h3>Style Melanin Doll</h3>
+          <p class="price">10 €</p>
+          <div class="actions">
+            <button>Lire plus</button><button>Télécharger</button>
+            <a href="https://gumroad.com/l/ebook-glowuptotal" target="_blank">
+  <button style="background-color: var(--doré);">Acheter maintenant</button>
+</a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+<section class="ebooks-carousel">
+  <h2 style="text-align:center; color:var(--doré);">Feuillette mes e-books</h2>
+  <div class="carousel">
+    <img src="chemin/vers/glow-up-total-cover.jpg" alt="Glow Up Total">
+    <img src="chemin/vers/journal-queen-cover.jpg" alt="Journal d’une Queen">
+    <img src="chemin/vers/style-melanin-cover.jpg" alt="Style Melanin Doll">
   </div>
 </section>
+    
+    <!-- 4. Instagram -->
+    <section class="instagram">
+      <h2 style="text-align:center; color:var(--doré); margin-bottom:20px;">Ma communauté Instagram</h2>
+      <div class="carousel-placeholder">Carrousel Instagram ici</div>
+      <div style="text-align:center;"><button>Me suivre sur Instagram</button></div>
+    </section>
+
+    <!-- 5. Témoignages -->
+    <section class="testimonials">
+      <h2 style="text-align:center; color:var(--doré); margin-bottom:20px;">Témoignages / Avis</h2>
+      <div class="testimonial-box">
+        <p>“Grâce à Glow Up Total, j’ai enfin trouvé confiance en moi !”</p>
+        <strong>– Amina</strong>
+      </div>
+      <div class="testimonial-box">
+        <p>“Le Journal d’une Queen m’aide chaque matin à me sentir plus forte.”</p>
+        <strong>– Leïla</strong>
+      </div>
+    </section>
+
+    <!-- 6. Newsletter -->
+    <section class="newsletter">
+      <h2>Reçois des astuces exclusives, des freebies et des conseils pour glow up comme une vraie Melanin Doll.</h2>
+      <form>
+        <input type="email" placeholder="Ton adresse email" required />
+        <button type="submit">Je m’inscris</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- 7. Footer -->
+  <footer>
+    <a href="#" class="social-icon">Instagram</a>
+    <a href="#" class="social-icon">TikTok</a>
+    <a href="#" class="social-icon">YouTube</a>
+    <div style="margin-top:10px;">
+      <a href="#">Mentions légales</a> • <a href="mailto:yanachristina@icloud.com">yanachristina@icloud.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
