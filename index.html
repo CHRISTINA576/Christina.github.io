@@ -21,66 +21,62 @@
     border: 2px solid #e5d7cc;
   }
 </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Melanin Doll</title>
-  <style>
-    :root {
-      --beige: #f5f0e8;
-      --nude: #e5d7cc;
-      --doré: #b8926a;
-      --rose: #d4a1a7;
-      --text-dark: #3e2e2c;
-    }
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--beige);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-
-    .hero {
-      background: var(--nude);
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .hero h1 {
-      font-size: 2.5em;
-      color: var(--doré);
-      margin-bottom: 0.5em;
-    }
-    .hero p {
-      font-style: italic;
-      color: var(--rose);
-      font-size: 1.2em;
-      margin-bottom: 1em;
-    }
-    .hero button {
-      background: var(--doré);
-      color: #fff;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-    .about, .ebooks, .instagram, .testimonials, .newsletter {
-      margin-bottom: 60px;
-    }
-
-    .about .photo-placeholder {
-      width: 150px; height: 150px;
-      border-radius: 50%;
-      background: var(--nude);
-      margin-bottom: 20px;
-    }
-    .about p { font-size: 1.1em; }
-
+    <meta charset="UTF-8">
+    <title>Melanin Doll</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fffaf5;
+            color: #5c3a2f;
+        }
+        header {
+            background-color: #f7e1dc;
+            color: #8c5c4b;
+            padding: 40px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f1d4c5;
+        }
+        nav a {
+            color: #5c3a2f;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #f9ede8;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #fffaf5, #fdeee9);
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: #7b5a4b;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .section img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
     .ebooks .grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; }
     .ebook-card {
       background: white;
@@ -181,6 +177,59 @@
       Découvrir mes e‑books
     </button>
   </section>
+<header>
+    <h1>Melanin Doll</h1>
+    <p>Beauté – Peau – Cheveux – Confiance</p>
+</header>
+
+<nav>
+    <a href="#skin">Melanin Doll Skin</a>
+    <a href="#hair">Melanin Doll Hair</a>
+    <a href="#beauty">Melanin Doll Beauty</a>
+</nav>
+
+<section class="hero">
+    <h1>Bienvenue dans l'univers Melanin Doll</h1>
+    <p>Célébrons la beauté naturelle, la peau éclatante et les cheveux en santé.</p>
+</section>
+
+<section id="skin" class="section">
+    <h2>Melanin Doll Skin</h2>
+    <img src="images/melanin_skin.jpeg" alt="Melanin Doll Skin">
+    <p>Découvre nos secrets pour une peau éclatante et hydratée.</p>
+</section>
+
+<section id="hair" class="section">
+    <h2>Melanin Doll Hair</h2>
+    <img src="images/melanin_hair.jpeg" alt="Melanin Doll Hair">
+    <p>Explore nos produits et conseils pour faire pousser tes cheveux et révéler ta couronne naturelle.</p>
+</section>
+ <h2>Melanin Doll Beauty</h2>
+  <p>La gamme maquillage pensée pour les peaux foncées, naturelles et éclatantes ✨</p>
+</header>
+
+<section class="products">
+  <div class="product-card">
+    <img src="https://cdn.pixabay.com/photo/2020/01/31/18/52/lipstick-4809321_960_720.jpg" alt="Rouge à lèvres nude">
+    <h3>Rouge à Lèvres Nude</h3>
+    <p>Texture crémeuse, fini satiné et teinte parfaite pour sublimer ta mélanine.</p>
+  </div>
+  <div class="product-card">
+    <img src="https://cdn.pixabay.com/photo/2021/09/23/09/59/lip-gloss-6648901_960_720.jpg" alt="Gloss hydratant">
+    <h3>Gloss Hydratant</h3>
+    <p>Gloss effet mouillé qui tient toute la journée sans coller. Brillance divine 💋</p>
+  </div>
+  <div class="product-card">
+    <img src="https://cdn.pixabay.com/photo/2017/08/06/11/12/make-up-2585780_960_720.jpg" alt="Fond de teint">
+    <h3>Fond de Teint Éclat</h3>
+    <p>Formule légère et couvrante, spécialement conçue pour les sous-tons chauds et dorés.</p>
+  </div>
+  <div class="product-card">
+    <img src="https://cdn.pixabay.com/photo/2017/03/28/12/10/cosmetics-2189130_960_720.jpg" alt="Palette yeux & highlighter">
+    <h3>Palette Sublime Glow</h3>
+    <p>Fards à paupières et enlumineurs aux tons dorés, bruns et cuivrés pour illuminer ton regard.</p>
+  </div>
+</section>
 
   <div class="container">
 
@@ -335,20 +384,58 @@
       <div style="text-align:center;"><button>Me suivre sur Instagram</button></div>
     </section>
 
-    <!-- 5. Témoignages -->
-    <section class="testimonials">
-      <h2 style="text-align:center; color:var(--doré); margin-bottom:20px;">Témoignages / Avis</h2>
-      <div class="testimonial-box">
-        <p>“Grâce à Glow Up Total, j’ai enfin trouvé confiance en moi !”</p>
-        <strong>– Amina</strong>
-      </div>
-      <div class="testimonial-box">
-        <p>“Le Journal d’une Queen m’aide chaque matin à me sentir plus forte.”</p>
-        <strong>– Leïla</strong>
-      </div>
-    </section>
+    <!-- 5. Témoignages Clients avec étoiles -->
+<section class="testimonials" style="padding: 60px 20px; background-color: #f9ede8;">
+  <h2 style="text-align:center; font-size: 32px; color: #8c5c4b; margin-bottom: 40px;">Elles parlent de Melanin Doll 💖</h2>
 
-    <!-- 6. Newsletter -->
+  <!-- Témoignage 1 -->
+  <div class="testimonial" style="max-width:800px; margin: 0 auto 30px; padding: 20px; background: #fffaf5; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <h3 style="margin: 0; color: #a9746e;">✨ Fatou, 25 ans</h3>
+    <div style="color: #ffc107; font-size: 20px;">★★★★★</div>
+    <p style="font-style: italic; margin-top:10px;">"Depuis que j’utilise le sérum Melanin Skin, ma peau est plus lumineuse et douce. J’ai retrouvé confiance en moi. Merci Christina pour cette merveille !"</p>
+  </div>
+
+  <!-- Témoignage 2 -->
+  <div class="testimonial" style="max-width:800px; margin: 0 auto 30px; padding: 20px; background: #fffaf5; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <h3 style="margin: 0; color: #a9746e;">💫 Grâce, 30 ans</h3>
+    <div style="color: #ffc107; font-size: 20px;">★★★★☆</div>
+    <p style="font-style: italic; margin-top:10px;">"Le masque capillaire Melanin Hair a sauvé mes cheveux ! Ils sont plus forts, plus longs, et mes boucles sont magnifiques. Je recommande à 100%."</p>
+  </div>
+
+  <!-- Témoignage 3 -->
+  <div class="testimonial" style="max-width:800px; margin: 0 auto 30px; padding: 20px; background: #fffaf5; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <h3 style="margin: 0; color: #a9746e;">🌸 Amina, 28 ans</h3>
+    <div style="color: #ffc107; font-size: 20px;">★★★★★</div>
+    <p style="font-style: italic; margin-top:10px;">"J’adore le gloss de la gamme Melanin Beauty. Il tient bien, hydrate mes lèvres et donne un look chic sans effort."</p>
+  </div>
+</section>
+
+    <!-- 6. Formulaire Laisse ton avis -->
+<section class="leave-review" style="padding: 60px 20px; background-color: #fffaf5;">
+  <h2 style="text-align: center; color: #8c5c4b;">Laisse ton avis ✨</h2>
+  <p style="text-align:center; margin-bottom: 30px;">Ton retour compte beaucoup pour moi 💌</p>
+
+  <form style="max-width: 600px; margin: 0 auto; background: #fdf1eb; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <label for="name" style="display:block; margin-bottom: 5px; font-weight:bold; color: #5c3a2f;">Ton prénom</label>
+    <input type="text" id="name" name="name" placeholder="Ex: Aïcha" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: none; border-radius: 8px; background: #fff;">
+
+    <label for="message" style="display:block; margin-bottom: 5px; font-weight:bold; color: #5c3a2f;">Ton message</label>
+    <textarea id="message" name="message" placeholder="Écris ton témoignage ici..." required style="width: 100%; padding: 10px; height: 100px; margin-bottom: 20px; border: none; border-radius: 8px; background: #fff;"></textarea>
+
+    <label for="rating" style="display:block; margin-bottom: 10px; font-weight:bold; color: #5c3a2f;">Ta note</label>
+    <select id="rating" name="rating" required style="width: 100%; padding: 10px; border: none; border-radius: 8px; margin-bottom: 20px; background: #fff;">
+      <option value="">⭐ Choisis une note</option>
+      <option value="5">★★★★★ - Excellent</option>
+      <option value="4">★★★★☆ - Très bien</option>
+      <option value="3">★★★☆☆ - Bien</option>
+      <option value="2">★★☆☆☆ - Moyen</option>
+      <option value="1">★☆☆☆☆ - À améliorer</option>
+    </select>
+
+    <button type="submit" class="btn" style="background-color: #d39e92; color: white; padding: 12px 25px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Envoyer mon avis</button>
+  </form>
+</section>
+    <!-- 7. Newsletter -->
     <section class="newsletter">
       <h2>Reçois des astuces exclusives, des freebies et des conseils pour glow up comme une vraie Melanin Doll.</h2>
       <form>
@@ -359,7 +446,7 @@
 
   </div>
 
-  <!-- 7. Footer -->
+  <!-- 8.  Footer -->
   <footer>
     <a href="#" class="social-icon">Instagram</a>
     <a href="#" class="social-icon">TikTok</a>
